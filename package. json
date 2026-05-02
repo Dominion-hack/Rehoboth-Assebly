@@ -1,0 +1,19 @@
+{
+  "name": "my-church-website",
+  "version": "1.0.0",
+  "description": "Official website for my church",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'No build step needed'",
+    "netlify": "netlify dev"
+  },
+  "keywords": [
+    "church",
+    "website",
+    "html",
+    "netlify"
+  ]
+}
