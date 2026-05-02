@@ -45,11 +45,6 @@
       margin-top: 80px;
     }
 
-    .midle-man {
-     text-align: center;
-     margin-top: 70px;
-    }
-
    /* SECTIONS */
     section {
       padding: 80px 50px;
@@ -121,7 +116,7 @@
 
     <div class="hero-content">
       <h1>WELCOME TO REHOBOTH ASSEMBLY QATAR</h1>
-      <p>Join us every Sunday at 9AM</p>
+     <p>Join us every Sunday at 9AM</p>
     </div>
 
   </div>
