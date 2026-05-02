@@ -131,7 +131,7 @@
 <!-- PASTOR -->
 <section id="pastor" class="dark pastor">
   <h2>Meet Our Pastor</h2>
-  <img src="PASTOR-IMAGE-URL">
+  <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777735561008-424a2e0f.jpg">
   <p>Pastor Adekunle is dedicated to serving God and guiding our church.</p>
 </section>
 
