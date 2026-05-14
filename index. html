@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>REHOBOTH ASSEBLY</title>
+<title>REHOBOTH ASSEMBLY</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -150,6 +150,33 @@ footer{
     nav{flex-direction:column;}
     nav a{display:inline-block; margin:8px;}
 }
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    z-index:999;
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp-btn img{
+    width:38px;
+    height:38px;
+}
 </style>
 </head>
 
@@ -194,9 +221,35 @@ footer{
 <div class="section" id="service">
     <h2>Service Times</h2>
     <div class="card">
-        <p>⛪ Sunday Worship — 9:00 AM</p>
-        <p>📖 Bible Study — Wednesday 6:00 PM</p>
-        <p>🙏 Prayer Night — Friday 7:00 PM</p>
+
+        <p>⛪ Sunday - House Fellowship</p>
+        <p>📍VENUE: House Fellowship Center Close To You/Online</p>
+        <p>⏰TIME: 7:00 PM</p>
+
+        <br>
+
+        <p>⛪ Tuesday - Digging Deep</p>
+        <p>📍VENUE: Online via Zoom</p>
+        <p>⏰TIME: 7:00 PM</p>
+
+        <br>
+
+        <p>⛪ Wednesday - Intercessory Prayers</p>
+        <p>📍VENUE: Via Church Zoom</p>
+        <p>⏰TIME: 7:00 PM</p>
+
+        <br>
+
+        <p>⛪ Thursday - Minister Prayers (Ministers only)</p>
+        <p>📍VENUE: Online via Zoom</p>
+        <p>⏰TIME: 7:00 PM</p>
+
+        <br>
+
+        <p>⛪ Friday - Friday School</p>
+        <p>📍VENUE: Anglican Center Religious Complex</p>
+        <p>⏰TIME: 8:00 AM</p>
+
     </div>
 </div>
 
@@ -206,16 +259,21 @@ footer{
     <div class="card">
         <p>📧 Email: rehobothassebly@gmail.com</p>
         <p>📞 Phone: +974 33843267</p>
-        <p>📍 Location: AGLICAN CENTER,RELEGIOUS COMPLEX</p>
+        <p>📍 Location: Anglican Center, Religious Complex</p>
     </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-    © 2026 Grace Church. Built with faith ❤️
+    © 2026 No Unauthorized Copyright
 </footer>
 
 </div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="contact.html" class="whatsapp-btn">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 </body>
 </html>
