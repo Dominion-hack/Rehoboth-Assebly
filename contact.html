@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390') no-repeat center center/cover;
+    padding:20px;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+}
+
+.contact-box{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:500px;
+    padding:40px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    text-align:center;
+    color:#fff;
+}
+
+.contact-box h1{
+    font-size:32px;
+    margin-bottom:15px;
+    color:#25D366;
+}
+
+.contact-box p{
+    margin-bottom:25px;
+    opacity:0.9;
+}
+
+.input-box{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:15px;
+    background:rgba(255,255,255,0.12);
+    color:#fff;
+}
+
+.input-box textarea{
+    height:140px;
+    resize:none;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder{
+    color:#ddd;
+}
+
+.send-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#25D366;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.send-btn:hover{
+    transform:scale(1.03);
+}
+
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="contact-box">
+
+    <h1>WELCOME TO OUR CONTACT SYSTEM</h1>
+
+    <p>Send us your message directly on WhatsApp.</p>
+
+    <div class="input-box">
+        <input type="text" id="user" placeholder="Input your email or phone number">
+    </div>
+
+    <div class="input-box">
+        <textarea id="message" placeholder="Input your message"></textarea>
+    </div>
+
+    <button class="send-btn" onclick="sendMessage()">
+        Send Message
+    </button>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+    let user = document.getElementById("user").value;
+    let message = document.getElementById("message").value;
+
+    let phoneNumber = "97433843267";
+
+    let text = `Hello Rehoboth Assembly,%0A%0AUser: ${user}%0A%0AMessage: ${message}`;
+
+    let whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    window.open(whatsappURL, '_blank');
+}
+
+</script>
+
+</body>
+</html>
