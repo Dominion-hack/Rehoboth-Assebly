@@ -1,215 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>REHOBOTH ASSEMBLY DOHA</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Church</title>
 
-  <style>
-    body {
-      margin: 1:
-      font-family: Arial, sans-serif;
-      color: white;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* HERO SECTION */
-    .hero {
-      background: url('https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777783229972-cbb67631.jpg') no-repeat center center/cover;
-      height: 70vh
-      position: relative;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
 
-    .overlay {
-      background: rgba(0,0,0,0.6);
-      height: 50%;
-      padding: 20px;
-    }
+body{
+    background:url('https://images.unsplash.com/photo-1507692049790-de58290a4334') no-repeat center center/cover;
+    min-height:100vh;
+    color:#fff;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+/* DARK OVERLAY */
+.overlay{
+    min-height:100vh;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.85));
+    padding:20px;
+}
 
-    header img {
-      height: 80px;
-    }
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
 
-    nav a {
-      color: white;
-      margin: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+nav h1{
+    font-size:22px;
+    font-weight:700;
+    color:#ffd700;
+}
 
-    .hero-content {
-      text-align: center;
-      margin-top: 80px;
-    }
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:15px;
+    transition:0.3s;
+}
 
-   /* SECTIONS */
-    section {
-      padding: 80px 50px;
-      text-align: center;
-    }
+nav a:hover{
+    color:#ffd700;
+}
 
-    .dark {
-      background: #2c3e50;
-    }
+/* HERO */
+.hero{
+    text-align:center;
+    margin-top:90px;
+    padding:20px;
+    animation:fadeIn 1.5s ease-in-out;
+}
 
-    .light {
-      background: #ecf0f1;
-      color: black;
-    }
+.hero h2{
+    font-size:50px;
+    font-weight:700;
+}
 
-    /* PASTOR */
-    .pastor img {
-      width: 150px;
-      border-radius: 80%;
-    }
+.hero p{
+    max-width:800px;
+    margin:15px auto;
+    font-size:18px;
+    line-height:1.8;
+    opacity:0.9;
+}
 
-    /* GALLERY */
-    .gallery img {
-      width: 30%;
-      margin: 5px;
-      border-radius: 10px;
-    }
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffd700;
+    color:#000;
+    font-weight:600;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-    /* FORM */
-    input, textarea {
-      width: 80%;
-      padding: 40px;
-      margin: 30px;
-    }
+.btn:hover{
+    transform:scale(1.05);
+}
 
-    button {
-      padding: 60px 40px;
-      background: #e67e22;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
+/* SECTIONS */
+.section{
+    margin-top:80px;
+    text-align:center;
+}
 
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 30px;
-    }
-  </style>
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:30px;
+    max-width:800px;
+    margin:20px auto;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* TITLES */
+.section h2{
+    font-size:32px;
+    margin-bottom:10px;
+    color:#ffd700;
+}
+
+.section p{
+    font-size:17px;
+    line-height:1.7;
+    opacity:0.9;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    margin-top:60px;
+    padding:20px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h2{font-size:32px;}
+    nav{flex-direction:column;}
+    nav a{display:inline-block; margin:8px;}
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="overlay">
+<div class="overlay">
 
-    <header>
-      <!-- LOGO -->
-      <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777734834676-de017e3c.jpg" alt="Church Logo">
-
-      <nav>
-        <a href="#">Home</a>
+<!-- NAV -->
+<nav>
+    <h1>REHOBOTH ASSEMBLY</h1>
+    <div>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#pastor">Pastor</a>
+        <a href="#service">Service</a>
         <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <div class="hero-content">
-      <h1>WELCOME TO REHOBOTH ASSEMBLY QATAR</h1>
-     <p>Join us every Sunday at 9AM</p>
-
-    <h2> A place where faith, hope, and love come alive. We are a community of believers united by our desire to know God more deeply, grow in His Word, and share His love with the world around us. Whether you are visiting for the first time or have been with us for years, you are warmly welcome here.
-
-The REHOBOTH ASSEMBLY was founded on the simple but powerful belief that Jesus Christ is the center of everything we do. We exist to glorify God through worship, service, fellowship, and discipleship. We believe that the church is not just a building, but a living body of people called together to reflect God’s love in everyday life.
-
-At our church, we are passionate about creating an environment where everyone feels accepted, valued, and encouraged. No matter your background, age, or story, there is a place for you here. We believe that every person has a purpose, and we are committed to helping you discover and walk in that purpose through Christ.
-
-Our worship services are designed to bring people closer to God through heartfelt praise, prayer, and the teaching of the Word of God. We believe in the power of the Bible as God’s living truth, and we are dedicated to preaching and teaching it in a way that is practical, inspiring, and life-changing.
-
-Beyond Sunday services, our church is active throughout the week with various ministries and programs for children, youth, and adults. We focus on building strong families, developing spiritual growth, and serving our local community with compassion. From outreach programs to prayer meetings and Bible studies, we strive to be the hands and feet of Jesus in our world.
-
-Our mission is simple: to lead people into a growing relationship with Jesus Christ and to equip them to impact their world for Him. We believe in love over judgment, grace over condemnation, and unity over division. Through the Holy Spirit, we seek to bring healing, restoration, and transformation to lives.
-
-We also believe in the importance of community. Life was never meant to be lived alone, and that is why we encourage fellowship and genuine relationships within our church family. Together, we celebrate victories, support one another in challenges, and grow stronger in faith.
-
-As we look to the future, our vision is to continue expanding God’s kingdom, reaching more souls, and making a lasting impact in our generation. We are committed to raising disciples who will carry the message of Christ to the ends of the earth.
-
-If you are searching for hope, peace, or a place to belong, we invite you to join us. Come as you are, and experience the love of God in a real and personal way. We believe your life will never be the same again.</h2>
-
     </div>
+</nav>
 
-  </div>
+<!-- HERO -->
+<div class="hero" id="home">
+    <h2>Welcome to Rehoboth Assembly</h2>
+    <p>
+        A place of worship, healing, and hope. Join us in growing your faith,
+        discovering purpose, and experiencing God’s love every day.
+    </p>
+
+    <a class="btn" href="#service">Join Our Service</a>
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="light">
-  <h2>Our Mission</h2>
-  <p>We are committed to spreading love, faith, and hope in our community.</p>
-</section>
+<div class="section" id="about">
+    <h2>About Us</h2>
+    <div class="card">
+        <p>
+            We are a Christ-centered community focused on love, unity, and spiritual growth.
+            Everyone is welcome — no matter your background.
+        </p>
+    </div>
+</div>
 
-<!-- PASTOR -->
-<section id="pastor" class="dark pastor">
-  <h2>Meet Our Pastor</h2>
-  <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777735561008-424a2e0f.jpg">
-  <p>Pastor Adekunle is dedicated to serving God and guiding our church.</p>
-</section>
+<!-- SERVICE -->
+<div class="section" id="service">
+    <h2>Service Times</h2>
+    <div class="card">
+        <p>⛪ Sunday Worship — 9:00 AM</p>
+        <p>📖 Bible Study — Wednesday 6:00 PM</p>
+        <p>🙏 Prayer Night — Friday 7:00 PM</p>
+    </div>
+</div>
 
-<!-- GALLERY -->
-<section class="light gallery">
-  <h2>Church Moments</h2>
-  <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777735475925-5a69d99a.jpg">
-  <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777735528624-269fbac2.jpg">
-  <img src="https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1777735561008-424a2e0f.jpg">
-</section>
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+        <p>📧 Email: rehobothassebly@gmail.com</p>
+        <p>📞 Phone: +974 33843267</p>
+        <p>📍 Location: AGLICAN CENTER,RELEGIOUS COMPLEX</p>
+    </div>
+</div>
 
-
-
-<section id="contact" class="dark">
-
-  <h2>Contact & Prayer Request</h2>
-
-<input id="name" type="text" placeholder="Your Name"><br><br>
-<input id="email" type="email" placeholder="Your Email"><br><br>
-<input id="prayer" type="text" placeholder="YOUR PRAYER POINT"><br><br>
-<textarea id="message" placeholder="Your Message or Prayer Request"></textarea><br><br>
-
-<button onclick="sendToWhatsApp()">Send to WhatsApp</button>
-
-<script>
-function sendToWhatsApp() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
-  let prayer = document.getElementById("prayer").value;
-  let phoneNumber = "233240433367";
-  let text =
-`New Church Message 🙏
-Name: ${name}
-Email: ${email}
-Message: ${message}
-Prayer Point: ${prayer}`;
-  let url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(text);
-
-  window.open(url, "_blank");
-}
-</script>
-
-  <h3>Find Us Here</h3>
-
-  <iframe
-    src="https://www.google.com/maps?q=Religious Complex&output=embed"
-    width="90%"
-    height="300"
-    style="border:0; border-radius:10px;"
-    loading="lazy">
-  </iframe>
-
-</section>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 REHOBOTH ASSEMBLY QATAR| All Rights Reserved</p>
+    © 2026 Grace Church. Built with faith ❤️
 </footer>
+
+</div>
 
 </body>
 </html>
