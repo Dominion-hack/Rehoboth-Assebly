@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>REHOBOTH ASSEMBLY</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -15,13 +17,17 @@
     font-family:'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:url('https://repgyetdcodkynrbxocg.supabase.co/storage/v1/object/public/images/telegram-1778780289796-7327b577.jpg') no-repeat center center/cover;
     min-height:100vh;
     color:#fff;
+    transition:0.5s;
 }
 
-/* DARK OVERLAY */
 .overlay{
     min-height:100vh;
     background:linear-gradient(
@@ -31,30 +37,31 @@ body{
     );
     padding:20px;
 }
-    
-/* NAV */
+
+/* NAVBAR */
+
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 30px;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:15px;
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
     backdrop-filter:blur(10px);
+    position:sticky;
+    top:10px;
+    z-index:999;
 }
 
 nav h1{
-    font-size:22px;
-    font-weight:700;
     color:#ffd700;
+    font-size:25px;
 }
 
 nav a{
     color:#fff;
     text-decoration:none;
-    margin:0 12px;
-    font-size:15px;
+    margin:0 10px;
     transition:0.3s;
 }
 
@@ -63,55 +70,76 @@ nav a:hover{
 }
 
 /* HERO */
+
 .hero{
     text-align:center;
     margin-top:90px;
-    padding:20px;
-    animation:fadeIn 1.5s ease-in-out;
+    animation:fadeIn 1.5s ease;
 }
 
 .hero h2{
-    font-size:50px;
-    font-weight:700;
+    font-size:55px;
 }
 
 .hero p{
     max-width:800px;
-    margin:15px auto;
-    font-size:18px;
+    margin:20px auto;
     line-height:1.8;
-    opacity:0.9;
+    font-size:18px;
 }
 
 .btn{
     display:inline-block;
     margin-top:20px;
-    padding:12px 25px;
+    padding:15px 35px;
+    border-radius:40px;
     background:#ffd700;
     color:#000;
-    font-weight:600;
-    border-radius:30px;
     text-decoration:none;
+    font-weight:bold;
     transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
+}
+
+/* SLIDER */
+
+.slider{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.slider img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
 
 /* SECTIONS */
+
 .section{
     margin-top:80px;
     text-align:center;
 }
 
+.section h2{
+    color:#ffd700;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
 .card{
     background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
     padding:30px;
     max-width:800px;
     margin:20px auto;
-    border-radius:20px;
     backdrop-filter:blur(10px);
     transition:0.3s;
 }
@@ -120,54 +148,67 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
-/* TITLES */
-.section h2{
-    font-size:32px;
-    margin-bottom:10px;
-    color:#ffd700;
-}
-
-.section p{
+.card p{
+    line-height:1.8;
     font-size:17px;
-    line-height:1.7;
-    opacity:0.9;
 }
 
-/* FOOTER */
-footer{
+/* COUNTDOWN */
+
+.countdown-box{
+    margin:60px auto;
+    text-align:center;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    max-width:700px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+#countdown{
+    font-size:40px;
+    color:#ffd700;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* DONATE */
+
+.donate-section{
     text-align:center;
     margin-top:60px;
-    padding:20px;
-    font-size:14px;
-    opacity:0.7;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
+.donate-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 35px;
+    border-radius:40px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .hero h2{font-size:32px;}
-    nav{flex-direction:column;}
-    nav a{display:inline-block; margin:8px;}
+.donate-btn:hover{
+    transform:scale(1.08);
 }
 
-/* WHATSAPP FLOAT BUTTON */
+/* WHATSAPP BUTTON */
+
 .whatsapp-btn{
     position:fixed;
     bottom:20px;
     right:20px;
-    width:65px;
-    height:65px;
+    width:70px;
+    height:70px;
     border-radius:50%;
     background:#25D366;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-decoration:none;
     box-shadow:0 5px 15px rgba(0,0,0,0.4);
     z-index:999;
     transition:0.3s;
@@ -178,9 +219,87 @@ footer{
 }
 
 .whatsapp-btn img{
-    width:38px;
-    height:38px;
+    width:40px;
 }
+
+/* THEME BUTTON */
+
+.theme-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ffd700;
+    font-size:22px;
+    cursor:pointer;
+    z-index:999;
+}
+
+/* LIGHT MODE */
+
+.light-mode{
+    color:#000;
+}
+
+.light-mode .overlay{
+    background:rgba(255,255,255,0.6);
+}
+
+.light-mode nav a,
+.light-mode p,
+.light-mode h1,
+.light-mode h2{
+    color:#000 !important;
+}
+
+/* ANIMATIONS */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+.hero h2{
+    font-size:35px;
+}
+
+.slider img{
+    height:250px;
+}
+
+}
+
 </style>
 </head>
 
@@ -188,96 +307,291 @@ footer{
 
 <div class="overlay">
 
-<!-- NAV -->
+<!-- NAVBAR -->
+
 <nav>
-    <h1>REHOBOTH ASSEMBLY</h1>
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
-    </div>
+
+<h1>REHOBOTH ASSEMBLY</h1>
+
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#service">Service</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
 <!-- HERO -->
-<div class="hero" id="home">
-    <h2>Welcome to Rehoboth Assembly</h2>
-    <p>
-        A place of worship, healing, and hope. Join us in growing your faith,
-        discovering purpose, and experiencing God’s love every day.
-    </p>
 
-    <a class="btn" href="#service">Join Our Service</a>
+<div class="hero section" id="home">
+
+<h2>Welcome To Rehoboth Assembly</h2>
+
+<p>
+A place of worship, healing and hope.
+Join us to grow spiritually and experience God's love.
+</p>
+
+<a href="#service" class="btn">
+Join Our Service
+</a>
+
+</div>
+
+<!-- IMAGE SLIDER -->
+
+<div class="slider section">
+
+<img id="slide"
+src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4">
+
+</div>
+
+<!-- COUNTDOWN -->
+
+<div class="countdown-box section">
+
+<h2>Next Service Countdown</h2>
+
+<div id="countdown"></div>
+
 </div>
 
 <!-- ABOUT -->
+
 <div class="section" id="about">
-    <h2>About Us</h2>
-    <div class="card">
-        <p>
-            We are a Christ-centered community focused on love, unity, and spiritual growth.
-            Everyone is welcome — no matter your background.
-        </p>
-    </div>
+
+<h2>About Us</h2>
+
+<div class="card">
+
+<p>
+We are a Christ-centered church focused on worship,
+unity, healing, spiritual growth and impacting lives.
+Everyone is welcome.
+</p>
+
 </div>
 
-<!-- SERVICE -->
+</div>
+
+<!-- SERVICES -->
+
 <div class="section" id="service">
-    <h2>Service Times</h2>
-    <div class="card">
 
-        <p>⛪ Sunday - House Fellowship</p>
-        <p>📍VENUE: House Fellowship Center Close To You/Online</p>
-        <p>⏰TIME: 7:00 PM</p>
+<h2>Service Times</h2>
 
-        <br>
+<div class="card">
 
-        <p>⛪ Tuesday - Digging Deep</p>
-        <p>📍VENUE: Online via Zoom</p>
-        <p>⏰TIME: 7:00 PM</p>
+<p>⛪ Sunday - House Fellowship</p>
+<p>📍Venue: House Fellowship Center / Online</p>
+<p>⏰ Time: 7:00 PM</p>
 
-        <br>
+<br>
 
-        <p>⛪ Wednesday - Intercessory Prayers</p>
-        <p>📍VENUE: Via Church Zoom</p>
-        <p>⏰TIME: 7:00 PM</p>
+<p>⛪ Tuesday - Digging Deep</p>
+<p>📍Venue: Zoom</p>
+<p>⏰ Time: 7:00 PM</p>
 
-        <br>
+<br>
 
-        <p>⛪ Thursday - Minister Prayers (Ministers only)</p>
-        <p>📍VENUE: Online via Zoom</p>
-        <p>⏰TIME: 7:00 PM</p>
+<p>⛪ Wednesday - Intercessory Prayers</p>
+<p>📍Venue: Church Zoom</p>
+<p>⏰ Time: 7:00 PM</p>
 
-        <br>
+<br>
 
-        <p>⛪ Friday - Friday School</p>
-        <p>📍VENUE: Anglican Center Religious Complex</p>
-        <p>⏰TIME: 8:00 AM</p>
+<p>⛪ Thursday - Minister Prayer</p>
+<p>📍Venue: Zoom</p>
+<p>⏰ Time: 7:00 PM</p>
 
-    </div>
+<br>
+
+<p>⛪ Friday - Friday School</p>
+<p>📍Venue: Anglican Center Religious Complex</p>
+<p>⏰ Time: 8:00 AM</p>
+
+</div>
+
+</div>
+
+<!-- DONATION -->
+
+<div class="donate-section section">
+
+<h2>Support The Ministry</h2>
+
+<a href="https://paypal.com" target="_blank" class="donate-btn">
+
+Donate Now
+
+</a>
+
 </div>
 
 <!-- CONTACT -->
+
 <div class="section" id="contact">
-    <h2>Contact Us</h2>
-    <div class="card">
-        <p>📧 Email: rehobothassebly@gmail.com</p>
-        <p>📞 Phone: +974 33843267</p>
-        <p>📍 Location: Anglican Center, Religious Complex</p>
-    </div>
+
+<h2>Contact Us</h2>
+
+<div class="card">
+
+<p>📧 rehobothassebly@gmail.com</p>
+
+<p>📞 +974 33843267</p>
+
+<p>📍 Anglican Center Religious Complex</p>
+
+</div>
+
 </div>
 
 <!-- FOOTER -->
-<footer>
-    © 2026 No Unauthorized Copyright
+
+<footer style="text-align:center; margin-top:60px; padding:20px;">
+
+© 2026 REHOBOTH ASSEMBLY
+
 </footer>
 
 </div>
 
-<!-- WHATSAPP FLOATING BUTTON -->
+<!-- WHATSAPP BUTTON -->
+
 <a href="contact.html" class="whatsapp-btn">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
 </a>
+
+<!-- DARK MODE -->
+
+<button id="themeToggle" class="theme-btn">
+
+🌙
+
+</button>
+
+<!-- MUSIC -->
+
+<audio autoplay loop controls
+style="
+position:fixed;
+bottom:20px;
+left:20px;
+z-index:999;
+border-radius:20px;
+">
+
+<source src="YOUR-MUSIC.mp3" type="audio/mp3">
+
+</audio>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* IMAGE SLIDER */
+
+const images = [
+
+'https://images.unsplash.com/photo-1519491050282-cf00c82424b4',
+
+'https://images.unsplash.com/photo-1507692049790-de58290a4334',
+
+'https://images.unsplash.com/photo-1522202176988-66273c2fd55f',
+
+'https://images.unsplash.com/photo-1515169067868-5387ec356754'
+
+];
+
+let index = 0;
+
+const slide = document.getElementById('slide');
+
+setInterval(()=>{
+
+index++;
+
+if(index >= images.length){
+index = 0;
+}
+
+slide.src = images[index];
+
+},3000);
+
+/* COUNTDOWN */
+
+const targetDate = new Date('May 20, 2026 19:00:00').getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById('countdown').innerHTML =
+
+`${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+},1000);
+
+/* SCROLL ANIMATION */
+
+const hiddenElements = document.querySelectorAll('.section');
+
+hiddenElements.forEach(el=>{
+el.classList.add('hidden');
+});
+
+window.addEventListener('scroll', ()=>{
+
+hiddenElements.forEach(el=>{
+
+const top = el.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+
+el.classList.add('show');
+
+}
+
+});
+
+});
+
+/* DARK MODE */
+
+const themeBtn = document.getElementById('themeToggle');
+
+themeBtn.onclick = ()=>{
+
+document.body.classList.toggle('light-mode');
+
+if(document.body.classList.contains('light-mode')){
+
+themeBtn.innerHTML = '☀️';
+
+}else{
+
+themeBtn.innerHTML = '🌙';
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
